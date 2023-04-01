@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/menu.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="logo">
+            <a href="/"><h4>NodeBlogr</h4></a>
+        </div>
+       <div class="new"> <a href="/newPost"><h4>New Post</h4></a></div>
+        </div>
+    </div>
+    <div class="blog-section">
+        <h1>Latest blog</h1>
+        <div class="blog-wrapper">
+            <div class="card-wrapper">
+
+                <% if (blogs.length>0){ %>
+                <% blogs.forEach(blog=>{%>
+                <div class="card">
+                    <h4><%=blog.title %></h4>
+                    <p><%=blog.snippet %></p>
+                        <a href="/post/<%= blog._id %>">Read -></a>
+                </div>
+                <% }) %>
+                <% }else{ %>
+                    <p>There are no blos to display</p>
+                    <% }%>
+         
+            </div>
+        </div>
+    </div>
+</body>
+</html>

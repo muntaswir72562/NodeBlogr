@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/menu.css">
+    <link rel="stylesheet" href="/style/newPost.css">
+    <title>New Post</title>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="logo">
+            <a href="/"><h4>Sustainable living</h4></a>
+        </div>
+       <div class="new"> <a href="/newPost"><h4>New Post</h4></a></div>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <h1>New Post</h1>
+        <div class="card">
+            <form action="/insertPost" id="newPost" method="POST">
+                <input type="text" name="title" id="title" placeholder="Title"><br>
+                <input type="text" name="snippet" id="snippet" placeholder="Snippet"><br>
+                <input type="text" name="body" id="body" placeholder="Body"><br>
+                  <button id="publish">Publish</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
